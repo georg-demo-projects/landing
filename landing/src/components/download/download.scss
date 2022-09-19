@@ -1,0 +1,33 @@
+.download {
+    &__actions-container {
+        width: 100%;
+        display: flex;
+        @include at-breakpoint($screen-not-small) {
+            gap: 7.45%;
+            // justify-content: space-between;
+        }
+        @include at-breakpoint($screen-small) {
+            flex-direction: column;
+        }
+    }
+
+    &__action {
+    }
+
+    &__action--app-store {
+        @include at-breakpoint($screen-not-small) {
+            flex: 1 1 43.492%;
+            // flex: 0 0 43.492%;
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: 12.973%;
+        }
+    }
+
+    &__action--google-play {
+        @include at-breakpoint($screen-not-small) {
+            flex: 1 1 49.069%;
+            // flex: 0 0 49.069%;
+        }
+    }
+}

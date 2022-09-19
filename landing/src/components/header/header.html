@@ -1,0 +1,33 @@
+<header class="header">
+    <div class="header__content">
+
+        <div class="header__item-1">
+            <div class="logo">
+                <div class="picture-wrapper logo__img">
+                    <include src="./components/picture-injection/picture-injection.html"
+                        locals='{"imgPathNoSfx": "./images/logo/logo"}'>
+                    </include>
+                </div>
+
+                <div class="picture-wrapper logo__label">
+                    <picture>
+                        <source srcset="./images/title_camelcase.svg" type="image/svg+xml">
+                        <img src="./images/title_camelcase.svg" alt="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__item-2">
+            <button class="login">
+                <span class="picture-wrapper login__img">
+                    <picture>
+                        <source srcset="./images/user.svg" type="image/svg+xml">
+                        <img src="./images/user.svg" alt="">
+                    </picture>
+                </span>
+                <span class="login__text">Login</span>
+            </button>
+        </div>
+    </div>
+</header>

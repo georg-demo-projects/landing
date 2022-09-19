@@ -1,0 +1,14 @@
+<picture class="picture-injection">
+
+    <!-- desktop -->
+    <source srcset="{{imgPathNoSfx}}--x2.png" type="image/png" media="(min-width:1440px)">
+    <source srcset="{{imgPathNoSfx}}--x1.png" type="image/png" media="(min-width:1080px)">
+    <source srcset="{{imgPathNoSfx}}--x0.75.png" type="image/png" media="(min-width:767px)">
+
+    <!-- mobile -->
+    <source srcset="{{imgPathNoSfx}}--mobile--x3.png" type="image/png" media="(min-width:750px)">
+    <source srcset="{{imgPathNoSfx}}--mobile--x2.png" type="image/png" media="(min-width:375px)">
+    <source srcset="{{imgPathNoSfx}}--mobile--x1.png" type="image/png">
+
+    <img class="picture-injection__img" src="{{imgPathNoSfx}}--mobile--x1.png" alt="">
+</picture>

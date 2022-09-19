@@ -1,0 +1,214 @@
+.platform-info {
+    @include add-padding-x();
+    @include at-breakpoint($screen-small) {
+        padding-right: 0;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        @include at-breakpoint($screen-not-small) {
+            gap: 10%; // 124/1240
+        }
+        @include at-breakpoint($screen-small) {
+            gap: 4.17%; // 15/360
+            justify-content: space-between;
+        }
+    }
+
+    &__content-gradient {
+        position: absolute;
+
+        @include at-breakpoint($screen-not-small) {
+            width: 254%; // 845/333
+            margin-top: -40%; // 130/333;
+            left: -75%; // 600/333;
+            filter: blur(100px);
+        }
+
+        @include at-breakpoint($screen-s-m) {
+            width: 310%;
+            margin-top: 40%;
+            margin-left: -160%;
+            transform: rotate(-90deg);
+            opacity: 0.7;
+            filter: blur(110px);
+        }
+
+        @include at-breakpoint($screen-s) {
+            width: 360%;
+            margin-top: 45%;
+            margin-left: -160%;
+            transform: rotate(-90deg);
+            opacity: 0.9;
+            filter: blur(100px);
+        }
+    }
+
+    &__item-1 {
+        @include at-breakpoint($screen-not-small) {
+            flex: 0 0 56.51%; // 700/1240
+        }
+        @include at-breakpoint($screen-small) {
+            flex: 0 0 66.48%; // 240/375-14
+        }
+    }
+
+    &__item-2 {
+        @include at-breakpoint($screen-not-small) {
+            flex: 0 0 26.845%; // 332.88/1240
+        }
+        @include at-breakpoint($screen-small) {
+            flex: 0 0 29.1%; // 105/375-14
+            // max-width: 105px;
+        }
+    }
+
+    &__card-container {
+        @include at-breakpoint($screen-not-small) {
+            padding-top: 19.44%; // 125/643
+        }
+
+        @include at-breakpoint($screen-s-m) {
+            padding-top: 25%;
+            padding-bottom: 22.5%; // 54/240
+        }
+
+        @include at-breakpoint($screen-s) {
+            padding-top: 13.33%; // 32/240
+            padding-bottom: 22.5%; // 54/240
+        }
+    }
+}
+
+.platform-card {
+    position: relative;
+    z-index: 20;
+
+    &__title {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+
+        @include at-breakpoint($screen-not-small) {
+            @include adaptive-size-rem("font-size", 64);
+            @include adaptive-size-rem("line-height", 70);
+        }
+        @include at-breakpoint($screen-small) {
+            @include adaptive-size-rem("font-size", 35);
+            @include adaptive-size-rem("line-height", 40);
+        }
+    }
+
+    &__subtitle {
+        position: relative;
+        @include at-breakpoint($screen-not-small) {
+            display: flex;
+            align-items: flex-end;
+            margin-top: 13.69%; // 88/643
+        }
+        @include at-breakpoint($screen-small) {
+            margin-top: 10%; // 24/240
+        }
+    }
+
+    &__subtitle-text {
+        position: relative;
+        z-index: 30;
+
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+
+        @include at-breakpoint($screen-not-small) {
+            @include adaptive-size-rem("font-size", 20);
+            @include adaptive-size-rem("line-height", 27);
+        }
+        @include at-breakpoint($screen-small) {
+            @include adaptive-size-rem("font-size", 16);
+            @include adaptive-size-rem("line-height", 22);
+        }
+    }
+}
+
+.line-decor {
+    @include at-breakpoint($screen-not-small) {
+        position: relative;
+        margin-right: 4.67%; // 30/643
+        width: 11.04%; // 71/643
+    }
+    @include at-breakpoint($screen-small) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 84%;
+    }
+
+    &__line {
+        @include at-breakpoint($screen-not-small) {
+            position: relative;
+            z-index: 20;
+            width: 100%;
+        }
+        @include at-breakpoint($screen-small) {
+            display: none;
+        }
+    }
+    &__gradient {
+        z-index: 10;
+        position: absolute;
+
+        @include at-breakpoint($screen-not-small) {
+            top: 0;
+            left: -16.9%; // 12
+            margin-top: -46.48%; // 33
+            width: 176%; // 125/71
+            opacity: 0.7;
+            filter: blur(50px);
+        }
+
+        @include at-breakpoint($screen-s-m) {
+            transform: translate(-25%, -25%);
+            height: 100%;
+            opacity: 0.3;
+            filter: blur(50px);
+        }
+
+        // @include at-breakpoint($screen-small) {
+        @include at-breakpoint($screen-s) {
+            transform: translate(-25%, -25%);
+            height: 100%;
+            opacity: 0.5;
+            filter: blur(50px);
+        }
+    }
+}
+
+.main-phone {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+
+    &__picture-wrapper {
+        z-index: 50;
+
+        @include at-breakpoint($screen-not-small) {
+            position: relative;
+            width: 100%;
+        }
+        @include at-breakpoint($screen-small) {
+            // position: absolute;
+            position: relative;
+            top: 0;
+            right: 0;
+            height: 100%;
+
+            & img {
+                object-fit: cover;
+                object-position: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,279 @@
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    color: #ffffff;
+
+    // section 1 -----------------------------------------------------
+
+    &__platform-info {
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: 5.76%; // 83/1440
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: 14.66%; // 55/375
+        }
+    }
+
+    // section 2 -----------------------------------------------------
+
+    &__download-1 {
+        position: relative;
+        z-index: 30;
+
+        @include at-breakpoint($screen-not-small) {
+            @include add-padding-x();
+            padding-right: 11.319%; // 163/1440
+            margin-bottom: 12.5%; // 180/1440
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: 18.66%; // 70/375
+        }
+    }
+
+    .download-1 {
+        @include at-breakpoint($screen-not-small) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // padding-right: 5.08%; // 63/1240
+        }
+
+        &__title {
+            @include at-breakpoint($screen-small) {
+                margin-bottom: 9.067%; // 34/375
+            }
+        }
+
+        &__actions-container {
+            @include at-breakpoint($screen-not-small) {
+                width: 31.95%; // 376/1177 (1440 - paddings)
+            }
+            @include at-breakpoint($screen-small) {
+                width: 49.33%; // 185/375
+                margin: 0 auto;
+            }
+        }
+    }
+
+    // section 3 -----------------------------------------------------
+
+    &__cards {
+        @include add-padding-x();
+    }
+
+    &__cards-list {
+        display: flex;
+
+        @include at-breakpoint($screen-not-small) {
+            margin: 0 6.2%; // 77/1240
+            gap: 7.46%; // 81/1086
+
+            & > .join-card {
+                width: 50%;
+            }
+        }
+
+        @include at-breakpoint($screen-small) {
+            flex-direction: column;
+
+            & > .join-card:not(:last-child) {
+                margin-bottom: 8.65%; // 30/347;
+            }
+        }
+    }
+
+    // section 4 -----------------------------------------------------
+
+    &__mission {
+        @include at-breakpoint($screen-not-small) {
+            @include height-ratio(0.728); // 1440x1048
+        }
+        @include at-breakpoint($screen-small) {
+            margin-top: 29.33%; // 110/347
+            margin-bottom: 50.67%; // 190/375
+        }
+    }
+
+    // section 5 -----------------------------------------------------
+
+    &__scanner {
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: 19.1%; // 275/1440;
+        }
+        @include at-breakpoint($screen-small) {
+            width: 100%;
+            margin-bottom: 40%; // 150/375
+        }
+    }
+
+    // section 6 -----------------------------------------------------
+
+    &__tools {
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: 13.89%; // 200/1440
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: 9.07%; // 30/375
+        }
+    }
+
+    // section 7 -----------------------------------------------------
+
+    &__nightlife {
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: 2.9%; // 41.85
+        }
+        @include at-breakpoint($screen-small) {
+            width: 100%;
+            margin-bottom: 34.67%; // 130
+        }
+    }
+
+    // section 8 -----------------------------------------------------
+
+    &__generate-qr {
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: 13.54%; // 195/1440
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: 32.267%; // 121/375
+        }
+    }
+
+    // section 9 -----------------------------------------------------
+
+    &__ordering {
+        z-index: 0;
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: -4.86%; // 70/1440
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: 25.33%; // 95/375
+        }
+    }
+
+    // section 10 -----------------------------------------------------
+
+    &__notab {
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: 0.9%; // 13/1440
+        }
+        @include at-breakpoint($screen-small) {
+            display: none;
+        }
+    }
+
+    // section 11 -----------------------------------------------------
+
+    &__get-in-touch {
+        z-index: 10;
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: 6.94%; // 100/1440
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: 19.73%; // 74/375
+        }
+    }
+
+    // section 12 -----------------------------------------------------
+    &__download-2 {
+        position: relative;
+        z-index: 30;
+
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: 10.42%; // 150/1440
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: 17.07%; // 64/375
+        }
+    }
+
+    .download-2 {
+        @include at-breakpoint($screen-not-small) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &__title {
+            @include at-breakpoint($screen-not-small) {
+                margin-bottom: 2.29%; // 33/1440
+            }
+            @include at-breakpoint($screen-small) {
+                margin-bottom: 12%; // 45/375
+            }
+        }
+
+        &__actions-container {
+            @include at-breakpoint($screen-not-small) {
+                width: 42.103%; // 606.28
+                & .download__actions-container {
+                    gap: 9.73%;
+                }
+            }
+            @include at-breakpoint($screen-small) {
+                width: 49.33%; // 185/375
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.tip-border {
+    box-sizing: border-box;
+    @include at-breakpoint($screen-not-small) {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+    }
+    @include at-breakpoint($screen-small) {
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    &__title {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: px-to-rem(23);
+
+            @include adaptive-size-rem("font-size", 51);
+            @include adaptive-size-rem("line-height", 62);
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: px-to-rem(24);
+
+            @include adaptive-size-rem("font-size", 24);
+            @include adaptive-size-rem("line-height", 29);
+        }
+    }
+    &__description {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+        @include at-breakpoint($screen-not-small) {
+            @include adaptive-size-rem("font-size", 18);
+            @include adaptive-size-rem("line-height", 25);
+        }
+
+        @include at-breakpoint($screen-small) {
+            @include adaptive-size-rem("font-size", 16);
+            @include adaptive-size-rem("line-height", 22);
+        }
+    }
+}
+
+.btn-app-store,
+.btn-google-play {
+    @include click-hover();
+}
+
+object {
+    pointer-events: none;
+}

@@ -1,0 +1,13 @@
+.btn-app-store {
+
+    &__img--desktop {
+        @include at-breakpoint($screen-small) {
+            display: none;
+        }
+    }
+    &__img--mobile {
+        @include at-breakpoint($screen-not-small) {
+            display: none;
+        }
+    }
+}

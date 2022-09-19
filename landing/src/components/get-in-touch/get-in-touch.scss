@@ -1,0 +1,192 @@
+.send {
+    @include at-breakpoint($screen-not-small) {
+        padding: 0 21.53%; // 310/1440
+    }
+
+    @include at-breakpoint($screen-small) {
+        @include add-padding-x();
+    }
+
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__card-container {
+        z-index: 10;
+        text-align: center;
+
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: 5.97%; // 86/1440
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: 14.12%; // 49/347
+        }
+    }
+
+    &__gradient-top {
+        position: absolute;
+        top: 0;
+        @include at-breakpoint($screen-not-small) {
+            margin-top: -6%;
+            width: 17%;
+            left: 24%;
+            transform: rotate(5.78deg);
+            opacity: 0.3;
+            filter: blur(100px);
+        }
+        @include at-breakpoint($screen-small) {
+            margin-top: -8%;
+            width: 65.86%;
+            left: -25%;
+            transform: rotate(5.78deg);
+            opacity: 0.3;
+            filter: blur(100px);
+        }
+
+    }
+
+    &__gradient-right {
+        position: absolute;
+        @include at-breakpoint($screen-not-small) {
+            bottom: 0;
+            margin-bottom: 0 ;
+            width: 23%;
+            right: -7%;
+            transform: rotate(5.78deg);
+            opacity: 0.4;
+            filter: blur(140px);
+        }
+        @include at-breakpoint($screen-small) {
+            bottom: 0;
+            margin-bottom: -60%;
+            width: 95%;
+            right: -65%;
+            transform: rotate(5.78deg);
+            opacity: 0.3;
+            filter: blur(100px);
+        }
+
+    }
+
+    &__form {
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__input {
+        background: #ffffff;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: 2.8%; // 23/820
+            padding: 3.53% 2.8%; // 29/820 23/820
+            border: 1px solid #5c5c5c;
+
+            @include adaptive-size-rem("font-size", 18);
+            @include adaptive-size-rem("line-height", 25);
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: 4.61%; // 16/347
+            padding: 4.9% 3.17%; // 17/347  11/347
+            border: 2px solid #5c5c5c;
+
+            @include adaptive-size-rem("font-size", 16);
+            @include adaptive-size-rem("line-height", 22);
+        }
+
+        &::placeholder {
+            font-family: "Noto Sans";
+            font-style: normal;
+            font-weight: 400;
+            color: #bfbfbf;
+
+            @include at-breakpoint($screen-not-small) {
+                @include adaptive-size-rem("font-size", 18);
+                @include adaptive-size-rem("line-height", 25);
+            }
+            @include at-breakpoint($screen-small) {
+                @include adaptive-size-rem("font-size", 16);
+                @include adaptive-size-rem("line-height", 22);
+            }
+        }
+
+        &:invalid {
+            border: 2px solid #ff0000;
+        }
+    }
+
+    &__input--msg {
+        max-width: 100%;
+        overflow: auto;
+        resize: none;
+
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: 7.32%; // 60/820
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: 11.53%; // 40/347
+        }
+    }
+
+    &__form-submit-container {
+        @include at-breakpoint($screen-not-small) {
+            padding: 0 25.6%; // 210/820
+        }
+    }
+
+    &__form-submit {
+        @include click-hover();
+        position: relative;
+        z-index: 10;
+        margin: 0 auto;
+
+        background: transparent;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        text-align: center;
+
+        color: #ffffff;
+
+        width: 100%;
+        @include at-breakpoint($screen-not-small) {
+            padding: 6.25% 0; // 25/400
+            @include adaptive-size-rem("font-size", 24);
+            @include adaptive-size-rem("line-height", 29.26);
+        }
+        @include at-breakpoint($screen-small) {
+            padding: 7.2% 0; // 25/347
+            @include adaptive-size-rem("font-size", 24);
+            @include adaptive-size-rem("line-height", 29.26);
+        }
+    }
+
+    &__input-inline-desktop {
+        display: flex;
+        @include at-breakpoint($screen-not-small) {
+            gap: 2.93%; // 24/820
+            & > .send__input {
+                width: 50%;
+            }
+        }
+        @include at-breakpoint($screen-small) {
+            flex-direction: column;
+            & > .send__input:not(:last-child) {
+                margin-bottom: 4.61%; // 16/347
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.scanner {
+    width: 100%;
+    position: relative;
+
+    &__back-image {
+        position: relative;
+        width: 100%;
+    }
+
+    &__gradient {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        @include at-breakpoint($screen-not-small) {
+            top: 0;
+            margin-top: -1.74%; // 25/1440
+            height: 126.8%; // 1060/836;
+        }
+        @include at-breakpoint($screen-small) {
+            top: -1px;
+            height: 113.68%; // 300/263
+        }
+        background: linear-gradient(179.83deg, #000000 -3.1%, rgba(0, 0, 0, 0) 56.76%, #000000 83.92%);
+    }
+
+    &__content {
+        @include at-breakpoint($screen-not-small) {
+            @include add-padding-x();
+            display: flex;
+        }
+    }
+
+    &__card-container {
+        position: relative;
+        z-index: 20;
+        @include at-breakpoint($screen-not-small) {
+            order: 2;
+            width: 32.26%; // 400/1240
+            display: flex;
+            justify-content: end;
+        }
+        @include at-breakpoint($screen-small) {
+            @include add-padding-x();
+            margin-top: -10.67%; // 40/375
+        }
+    }
+
+    &__card {
+        @include at-breakpoint($screen-not-small) {
+            width: 100%;
+        }
+    }
+
+    &__description {
+        @include at-breakpoint($screen-not-small) {
+            padding-right: 20%;
+        }
+    }
+
+    &__phones-container {
+        z-index: 20;
+        display: flex;
+
+        @include at-breakpoint($screen-not-small) {
+            order: 1;
+            width: 67.74%; // 840/1240
+            gap: 5.95%; // 50/840
+            margin-top: -31.77%; // -394/1240
+        }
+        @include at-breakpoint($screen-small) {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 11.73%; // 44/375
+            margin-top: 19.47%; // 73/375
+
+            & > .scanner__phone:not(:first-child) {
+                margin-top: 33.1%;
+            }
+        }
+    }
+
+    &__phone,
+    &__phone {
+        @include at-breakpoint($screen-not-small) {
+            width: 39.59%; // 332.56/840
+        }
+    }
+}

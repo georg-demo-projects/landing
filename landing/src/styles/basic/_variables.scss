@@ -1,0 +1,24 @@
+// viewport
+$grid-breakpoint-x-small: 320px;
+$grid-breakpoint-small: 480px;
+$grid-breakpoint-medium: 767px;
+$grid-breakpoint-ml: 1060px;
+$grid-breakpoint-large: 1440px;
+
+$epsilon: 0.1px;
+
+$screen-small: 0 $grid-breakpoint-medium - $epsilon;
+$screen-not-small: $grid-breakpoint-medium;
+$screen-medium: $grid-breakpoint-medium $grid-breakpoint-large - $epsilon;
+$screen-large: $grid-breakpoint-large;
+$screen-not-large: 0 $grid-breakpoint-large - $epsilon;
+
+$screen-s: 0 $grid-breakpoint-small - $epsilon;
+$screen-s-m: $grid-breakpoint-small $grid-breakpoint-medium - $epsilon;
+
+$screen-medium-ml: $grid-breakpoint-medium $grid-breakpoint-ml - $epsilon;
+$screen-greater-than-ml: $grid-breakpoint-ml;
+
+
+// font
+$default-font-size: 16; // px (1rem)

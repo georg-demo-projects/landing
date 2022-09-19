@@ -1,0 +1,56 @@
+@import "fonts/font-faces";
+@import "basic/variables";
+@import "basic/functions";
+@import "basic/mixins";
+@import "basic/reset";
+@import "notab/common";
+@import "../components/download/download";
+@import "../components/footer/footer";
+@import "../components/header/header";
+@import "../components/cookie-popup/cookie-popup";
+@import "../components/btn-app-store/btn-app-store";
+@import "../components/btn-google-play/btn-google-play";
+@import "../components/get-in-touch/get-in-touch";
+@import "../components/platform-info/platform-info";
+@import "../components/mission/mission";
+@import "../components/scanner/scanner";
+@import "../components/tools/tools";
+@import "../components/nightlife/nightlife";
+@import "../components/generate-qr/generate-qr";
+@import "../components/ordering/ordering";
+@import "../components/notab/notab";
+@import "../components/action-card/action-card";
+@import "../components/main/main";
+
+body {
+    background-color: #000000;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    @include at-breakpoint($screen-not-small) {
+        margin: 0 auto;
+        max-width: $grid-breakpoint-large;
+    }
+    @include at-breakpoint($screen-small) {
+        margin: 0;
+        min-width: 300px;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    @include at-breakpoint($screen-not-small) {
+        margin-bottom: 5.97%; // 86/1440
+    }
+    @include at-breakpoint($screen-small) {
+        margin-bottom: 6.4%; // 24/375
+    }
+}

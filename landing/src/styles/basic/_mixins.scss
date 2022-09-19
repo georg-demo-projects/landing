@@ -1,0 +1,59 @@
+
+// media
+@mixin at-breakpoint($viewport) {
+    @if length($viewport) == 1 {
+        @media all and (min-width: nth($viewport, 1)) {
+            @content;
+        }
+    } @else {
+        @media all and (min-width: nth($viewport, 1)) and (max-width: nth($viewport, 2)) {
+            @content;
+        }
+    }
+}
+
+// фиксирует высоту блока в зависимости от ширины
+// $ratioToWidth - отношение к ширине, например 0.5 - половина
+// $ratioChildSelector - имя класса child-а. По дефолту - первый потомок
+@mixin height-ratio($ratioToWidth, $ratioChildSelector: "> :first-child") {
+    $selector: unquote($ratioChildSelector);
+
+    position: relative;
+    width: 100%;
+
+    &::before {
+        content: "";
+        display: block;
+        padding-top: percentage($ratioToWidth);
+    }
+
+    #{$selector} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+// то же, что и height-ratio, но передается и ширина, и высота
+@mixin aspect-ratio($width, $height, $ratioChildSelector: "> :first-child") {
+    $selector: unquote($ratioChildSelector);
+
+    position: relative;
+
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    #{$selector} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}

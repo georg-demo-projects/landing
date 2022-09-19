@@ -1,0 +1,168 @@
+.nightlife {
+    // 778-10-652 // 54.02% - 0.71% - 45.27%
+
+    display: flex;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+
+    @include at-breakpoint($screen-not-small) {
+        justify-content: space-between;
+    }
+    @include at-breakpoint($screen-small) {
+        flex-direction: column;
+    }
+
+    &__flex-item-1 {
+        @include at-breakpoint($screen-not-small) {
+            width: 54.02%; // 778/1440
+        }
+        @include at-breakpoint($screen-small) {
+            width: 100%;
+            margin-bottom: 2.67%; // 10/375
+        }
+    }
+
+    &__flex-item-2 {
+        @include at-breakpoint($screen-not-small) {
+            z-index: 20;
+            width: 45.27%; // 652/1440
+        }
+        @include at-breakpoint($screen-small) {
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    &__back-img-1-wrapper {
+        position: relative;
+        @include at-breakpoint($screen-small) {
+            margin-bottom: -22.4%;
+        }
+    }
+
+    &__back-img-1 {
+        @include at-breakpoint($screen-small) {
+            width: 100%;
+        }
+    }
+
+    &__gradient {
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        background: linear-gradient(179.83deg, #000000 -3.1%, rgba(0, 0, 0, 0) 56.76%, #000000 83.92%);
+
+        @include at-breakpoint($screen-not-small) {
+            height: 112.54%;
+        }
+        @include at-breakpoint($screen-small) {
+            height: 107.7%;
+        }
+    }
+
+    &__card {
+        position: relative;
+        z-index: 30;
+        @include at-breakpoint($screen-not-small) {
+            margin-left: 23.26%; // 181/778
+            margin-top: -8.87%; // 69/778
+            margin-bottom: 7.46%; // 58/778;
+        }
+        @include at-breakpoint($screen-small) {
+            @include add-padding-x();
+            margin-bottom: 13.33%; // 50/375;
+        }
+
+        & .info-card__description {
+            @include at-breakpoint($screen-not-small) {
+                width: 50%;
+            }
+            @include at-breakpoint($screen-small) {
+                padding-right: 10%;
+            }
+        }
+    }
+
+    &__download {
+        @include at-breakpoint($screen-not-small) {
+            margin-left: 23.26%; // 181/778
+            width: 48.33%; // 376/778
+        }
+        @include at-breakpoint($screen-small) {
+            width: 49.33%; // 185/375
+            margin: 0 auto;
+        }
+    }
+
+    &__back-img-2-wrapper {
+        @include at-breakpoint($screen-not-small) {
+            position: relative;
+        }
+        @include at-breakpoint($screen-small) {
+            width: 100%;
+        }
+    }
+
+    &__back-img-2 {
+        @include at-breakpoint($screen-small) {
+            width: 100%;
+        }
+    }
+
+    &__nightlife-wrapper {
+        z-index: 30;
+        position: absolute;
+        @include at-breakpoint($screen-not-small) {
+            top: 0;
+            margin-top: -2%; // 13/652
+            left: 64.21%; // 418/652
+            width: 20.43%; // 133/652
+        }
+        @include at-breakpoint($screen-small) {
+            top: 0;
+            margin-top: 37.6%; // 141/375
+            left: 7.47%; // 28/375
+            width: 22.93%; // 86/375
+        }
+    }
+
+    &__iphones-container {
+        @include at-breakpoint($screen-not-small) {
+            position: relative;
+            margin-top: -60.122%; // 392/652
+        }
+        @include at-breakpoint($screen-small) {
+            margin-top: -19.73%;
+            width: 100%;
+            padding: 0 12.53%; // 47/375
+        }
+    }
+
+    &__iphone-1-wrapper {
+        position: relative;
+        z-index: 30;
+        @include at-breakpoint($screen-not-small) {
+            width: 51%; // 332.56/652
+            left: -23.16%; // 151/652
+            margin-bottom: -50%; // 326/652
+        }
+        @include at-breakpoint($screen-small) {
+            width: 100%;
+        }
+    }
+    &__iphone-2-wrapper {
+        position: relative;
+        z-index: 30;
+        @include at-breakpoint($screen-not-small) {
+            width: 51%; // 332.56/652
+            left: 38%; // 248/652
+        }
+        @include at-breakpoint($screen-small) {
+            width: 100%;
+            margin-top: 17.8%; // 50 / 281 (375 - padding)
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.join-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include at-breakpoint($screen-greater-than-ml) {
+        padding: 5.52% 11.05% 5.52% 5.06%; // 60 120 60 55 / 1086
+    }
+    @include at-breakpoint($screen-medium-ml) {
+        padding: 5.3% 4.8%;
+    }
+    @include at-breakpoint($screen-small) {
+        padding: 11.52% 9.51%; // 40/347 33/347
+        padding-right: 15.56%; // 54/347
+    }
+
+    &__title {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 700;
+
+        @include at-breakpoint($screen-not-small) {
+            @include adaptive-size-rem("font-size", 30);
+            @include adaptive-size-rem("line-height", 41);
+        }
+        @include at-breakpoint($screen-small) {
+            @include adaptive-size-rem("font-size", 24);
+            @include adaptive-size-rem("line-height", 33);
+        }
+    }
+    &__action {
+        @include click-hover();
+
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+        text-decoration-line: underline;
+
+        @include at-breakpoint($screen-not-small) {
+            margin-top: 9.15%; // 30/328
+
+            @include adaptive-size-rem("font-size", 24);
+            @include adaptive-size-rem("line-height", 33);
+        }
+
+        @include at-breakpoint($screen-small) {
+            margin-top: 11.63%; // 30/258
+
+            @include adaptive-size-rem("font-size", 18);
+            @include adaptive-size-rem("line-height", 25);
+        }
+    }
+}
+
+.card-border {
+    @include at-breakpoint($screen-not-small) {
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 21.3671px;
+    }
+    @include at-breakpoint($screen-small) {
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 21.3671px;
+    }
+}

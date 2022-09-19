@@ -1,0 +1,84 @@
+.popup {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    transform: translate(0, 100%);
+
+    &__body {
+        @include add-padding-x();
+        background: #212834;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        @include at-breakpoint($screen-not-small) {
+            padding-top: 1.5%;
+            padding-bottom: 1.5%;
+        }
+        @include at-breakpoint($screen-small) {
+            padding-top: 4%;
+            padding-bottom: 4%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @include at-breakpoint($screen-not-small) {
+            gap: 6%;
+        }
+
+        @include at-breakpoint($screen-small) {
+            gap: 20%;
+        }
+
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    &__text {
+        @include at-breakpoint($screen-not-small) {
+            font-size: px-to-rem(14);
+            line-height: px-to-rem(19);
+        }
+
+        @include at-breakpoint($screen-small) {
+            font-size: px-to-rem(12);
+            line-height: px-to-rem(16);
+        }
+    }
+
+    &__close {
+        @include click-hover();
+
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        border-radius: 6px;
+        text-decoration: none;
+        cursor: pointer;
+
+        @include at-breakpoint($screen-not-small) {
+            font-size: px-to-rem(14);
+            line-height: px-to-rem(19);
+
+            border: 1px solid #ffffff;
+            padding: 1.2% 4.44%;
+        }
+
+        @include at-breakpoint($screen-small) {
+            font-size: px-to-rem(14);
+            line-height: px-to-rem(19);
+
+            border: 1px solid #ffffff;
+            padding: 2.6% 7.3%;
+        }
+    }
+}

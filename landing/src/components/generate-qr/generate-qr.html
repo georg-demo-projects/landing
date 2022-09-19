@@ -1,0 +1,46 @@
+<div class="generate-qr">
+
+    <div class="generate-qr__img-content">
+        <div class="picture-wrapper generate-qr__back-img-wrapper">
+            <picture>
+                <source srcset="./images/qr-notab-back/qr-notab-back.svg" type="image/svg+xml">
+                <img src="./images/qr-notab-back/qr-notab-back.svg" alt="">
+            </picture>
+        </div>
+
+        <div class="generate-qr__gradient">
+            <picture>
+                <source srcset="./images/gradients/generate-qr.svg" type="image/svg+xml">
+                <img src="./images/gradients/generate-qr.svg" alt="">
+            </picture>
+        </div>
+
+        <div class="picture-wrapper generate-qr__phone-wrapper">
+            <include src="./components/picture-injection/picture-injection.html"
+                locals='{"imgPathNoSfx": "./images/iphone_7/iphone_7"}'>
+            </include>
+
+        </div>
+
+        <div class="picture-wrapper generate-qr__arrow-wrapper">
+            <picture>
+                <source srcset="./images/Arrow_1.svg" type="image/svg+xml" media="(min-width:767px)">
+                <source srcset="./images/Arrow_2.svg" type="image/svg+xml" media="(max-width:767px)">
+                <img src="./images/Arrow_1.svg" alt="">
+            </picture>
+        </div>
+        <div class="generate-qr__arrow-label">Scan QR-code</div>
+    </div>
+
+    <div class="generate-qr__card">
+        <div class="info-card__title generate-qr__bottom">
+            Generate your <div class="text-wbr-desktop"></div>
+            QR-code
+        </div>
+        <div class="info-card__description">
+            The guest QR code is scanned <div class="text-wbr-desktop"></div>
+            <div class="text-wbr-mobile"></div>
+            by the staff and automatically sent
+        </div>
+    </div>
+</div>

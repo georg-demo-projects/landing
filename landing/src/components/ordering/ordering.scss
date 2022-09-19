@@ -1,0 +1,147 @@
+.ordering {
+    &__card-container {
+
+        @include at-breakpoint($screen-not-small) {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 11.11%; // 160/1440
+        }
+        @include at-breakpoint($screen-small) {
+            @include add-padding-x();
+            margin-bottom: 20%; // 75/375;
+        }
+    }
+
+    &__img-container {
+        z-index: 20;
+        position: relative;
+        @include at-breakpoint($screen-not-small) {
+            padding-left: 20%; // 288/1440
+            padding-right: 17.22%; // 248/1440
+        }
+        @include at-breakpoint($screen-small) {
+            padding-right: 4%; // 15/375
+        }
+
+        & .picture-injection {
+            width: 100%;
+        }
+    }
+
+    &__gradient {
+        z-index: -1;
+        position: absolute;
+        opacity: 0.2;
+        transform: rotate(5.78deg);
+        top: 0;
+        @include at-breakpoint($screen-not-small) {
+            width: 29.58%;
+            left: 86.8%;
+            margin-top: 0.5%;
+            filter: blur(130px);
+        }
+        @include at-breakpoint($screen-small) {
+            width: 70%;
+            left: 65.9%;
+            margin-top: -7%;
+            filter: blur(90px);
+        }
+    }
+}
+
+.ordering-img-group {
+    width: 100%;
+    position: relative;
+
+    @include at-breakpoint($screen-small) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__phone {
+        z-index: 40;
+        @include at-breakpoint($screen-not-small) {
+            margin-left: 2.66%; // 24/902
+            margin-right: 1.33%; // 12/902
+        }
+        @include at-breakpoint($screen-small) {
+            order: 2;
+        }
+    }
+
+    &__tip1,
+    &__tip2,
+    &__tip3,
+    &__tip4 {
+        z-index: 50;
+        background-color: #000000;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+
+        @include at-breakpoint($screen-not-small) {
+            position: absolute;
+            top: 0;
+            padding: px-to-rem(20) px-to-rem(24);
+
+            @include adaptive-size-rem("font-size", 22.8021);
+            @include adaptive-size-rem("line-height", 27);
+        }
+        @include at-breakpoint($screen-small) {
+            position: relative;
+            padding: px-to-rem(14) px-to-rem(20);
+
+            @include adaptive-size-rem("font-size", 14);
+            @include adaptive-size-rem("line-height", 16);
+        }
+    }
+
+    &__tip1 {
+        @include at-breakpoint($screen-not-small) {
+            margin-top: 39.8%; // 359/902
+            left: 0;
+        }
+        @include at-breakpoint($screen-small) {
+            order: 1;
+            left: 10.833%; // 30/360
+        }
+    }
+    &__tip2 {
+        @include at-breakpoint($screen-not-small) {
+            margin-top: 22.61%; // 204/902
+            left: 55.32%; // 499/902
+        }
+        @include at-breakpoint($screen-small) {
+            position: absolute;
+            align-self: flex-end;
+            margin-top: 24.72%; // 89/360
+        }
+    }
+    &__tip3 {
+        @include at-breakpoint($screen-not-small) {
+            margin-top: 70.84%; // 639/902
+            right: 0;
+        }
+        @include at-breakpoint($screen-small) {
+            order: 3;
+            align-self: flex-end;
+        }
+    }
+    &__tip4 {
+        @include at-breakpoint($screen-not-small) {
+            margin-top: 80.93%; // 730/902
+            left: 24.56%; // 222/902;
+        }
+        @include at-breakpoint($screen-small) {
+            position: absolute;
+            left: 8.33%; // 30/360
+            margin-top: 114.17%; // 411/360
+        }
+    }
+}

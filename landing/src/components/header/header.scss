@@ -1,0 +1,112 @@
+.header {
+    @include add-padding-x();
+
+    @include at-breakpoint($screen-not-small) {
+        margin-top: 3.125%; // 45/1440
+        margin-bottom: 1.25%; // 18/1440
+    }
+    @include at-breakpoint($screen-small) {
+        margin-top: 10.66%; // 40/375
+        margin-bottom: 17.42%; // 65.31/375
+    }
+
+    &__content {
+        position: relative;
+        z-index: 20;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__item-1 {
+        @include at-breakpoint($screen-not-small) {
+            flex: 1 0 24.51%; // 304/1240
+        }
+        @include at-breakpoint($screen-small) {
+            flex: 1 0 50%; // 173.5/347
+        }
+    }
+    &__item-2 {
+        @include at-breakpoint($screen-not-small) {
+            flex: 1 0 75.49%; // 936/1240
+        }
+        @include at-breakpoint($screen-small) {
+            flex: 1 0 50%; // 173.5/347
+        }
+    }
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &__img {
+        @include at-breakpoint($screen-not-small) {
+            width: 35.2%; // 107/304
+            margin-right: 2.63%; // 8/304
+        }
+        @include at-breakpoint($screen-small) {
+            width: 29.81%; // 51.73/173.5
+            margin-right: 2.23%; // 3.87/173.5
+        }
+    }
+
+    &__label {
+        @include at-breakpoint($screen-not-small) {
+            width: 31.58%; // 96/304
+        }
+        @include at-breakpoint($screen-small) {
+            width: 26.75%; // 46.41/173.5
+        }
+    }
+}
+
+.login {
+
+    @include click-hover();
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: px-to-rem(12);
+
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    outline: none;
+
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+
+    @include at-breakpoint($screen-not-small) {
+        @include adaptive-size-rem("font-size", 18);
+        @include adaptive-size-rem("line-height", 21);
+    }
+    @include at-breakpoint($screen-small) {
+        margin-left: auto;
+
+        @include adaptive-size-rem("font-size", 14);
+        @include adaptive-size-rem("line-height", 19);
+    }
+
+    &__img {
+        @include at-breakpoint($screen-not-small) {
+            width: px-to-rem(26);
+        }
+        @include at-breakpoint($screen-small) {
+            display: none;
+        }
+    }
+
+    &__text {
+        border-bottom: 1px solid #ffffff;
+        @include at-breakpoint($screen-not-small) {
+            padding: 0 px-to-rem(3);
+        }
+        @include at-breakpoint($screen-small) {
+            padding: px-to-rem(4) 0;
+        }
+    }
+}

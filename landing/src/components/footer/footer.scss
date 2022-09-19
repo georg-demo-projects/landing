@@ -1,0 +1,144 @@
+.footer {
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+
+    &__content {
+        position: relative;
+        z-index: 10;
+        display: flex;
+
+        @include at-breakpoint($screen-not-small) {
+            @include add-padding-x();
+        }
+        @include at-breakpoint($screen-small) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__gradient {
+        position: absolute;
+        z-index: 0;
+        transform: translate(-50%, -50%);
+        @include at-breakpoint($screen-not-small) {
+            left: 0;
+            top: 100%;
+            width: 150%;
+        }
+        @include at-breakpoint($screen-small) {
+            left: 0;
+            width: 200%;
+            top: 100%;
+        }
+    }
+
+    &__gradient-img {
+        width: 100%;
+    }
+
+    &__gradient {
+        position: absolute;
+        top: 0;
+        @include at-breakpoint($screen-not-small) {
+            margin-top: -5%;
+            width: 30%;
+            left: -7%;
+            transform: rotate(5.78deg);
+            opacity: 0.5;
+            filter: blur(160px);
+        }
+        @include at-breakpoint($screen-small) {
+            margin-top: 10%;
+            width: 60%;
+            left: -28%;
+            transform: rotate(5.78deg);
+            opacity: 0.3;
+            filter: blur(50px);
+        }
+    }
+}
+
+.contacts {
+    // font-family: "Avenir";
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+
+    @include at-breakpoint($screen-not-small) {
+        width: 50%;
+
+        @include adaptive-size-rem("font-size", 18);
+        @include adaptive-size-rem("line-height", 25);
+    }
+    @include at-breakpoint($screen-small) {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15.47%; // 58/375
+        @include adaptive-size-rem("font-size", 14);
+        @include adaptive-size-rem("line-height", 19);
+    }
+
+    &__logo {
+        @include at-breakpoint($screen-not-small) {
+            // width: 13%; // 81/620
+            @include adaptive-size-rem("width", 81);
+            @include adaptive-size-rem("margin-bottom", 16);
+        }
+        @include at-breakpoint($screen-small) {
+            @include adaptive-size-rem("width", 71);
+            @include adaptive-size-rem("margin-bottom", 17);
+        }
+    }
+
+    &__email {
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: px-to-rem(19.5);
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: px-to-rem(9);
+        }
+    }
+}
+
+.agreements {
+    @include at-breakpoint($screen-not-small) {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    @include at-breakpoint($screen-small) {
+        order: 1;
+    }
+
+    &__content {
+        // font-family: 'Avenir';
+        // font-weight: 400;
+        font-family: "Montserrat";
+        font-weight: 500;
+
+        font-style: normal;
+        white-space: nowrap;
+
+        @include at-breakpoint($screen-not-small) {
+            margin-left: auto;
+            @include adaptive-size-rem("font-size", 18);
+            @include adaptive-size-rem("line-height", 25);
+        }
+        @include at-breakpoint($screen-small) {
+            @include adaptive-size-rem("font-size", 18);
+            @include adaptive-size-rem("line-height", 25);
+        }
+    }
+
+    &__terms {
+        @include at-breakpoint($screen-not-small) {
+            margin-bottom: px-to-rem(25);
+        }
+        @include at-breakpoint($screen-small) {
+            margin-bottom: px-to-rem(14);
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+@function half-width() {
+    @return min(100vw / 2, $grid-breakpoint-large / 2);
+}
+
+@function px-to-rem($px) {
+    @return math.div($px, $default-font-size) * 1rem;
+}
